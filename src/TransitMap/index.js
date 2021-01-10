@@ -20,6 +20,8 @@ export const rename = {
 
 const manualLabelPlacement = {
   // 'BSD': [-122.271168, 37.804324],
+  '321': [-122.03253539842002, 37.850260435124405],
+  '311': [-122.03405097473185, 37.94849844161103],
 };
 
 const serviceChanges = serviceChangeData.map(change => {
@@ -137,7 +139,7 @@ export default function TransitMap(props) {
             f.order = orderScale(f.scaleKey);
             return f;
           })
-        , f => -f.route)
+        , f => f.route)
       , f => f.order)
       .map(f => {
         if (f.geometry) {

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/County-Connection-Service-Cuts/precache-manifest.2af7d3ed2e5cefb9196d2dc90d6eeb14.js"
+  "/County-Connection-Service-Cuts/precache-manifest.474189d229525d3abb5d9a578c2250f8.js"
 );
 
 self.addEventListener('message', (event) => {

@@ -1,0 +1,253 @@
+.App {
+  font-size: 1.1rem;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: #222222;
+  font-family: 'Fira Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+.App .panel {
+  display: flex;
+  flex-direction: column;
+  width: 256px;
+  box-sizing: border-box;
+  padding: 0.5em 1em;
+  padding-top: 1em;
+  color: white;
+  border: 1px solid #5D5D5D;
+}
+
+.App .panel .headings {
+}
+
+.App .panel .headings .title {
+  font-weight: 500;
+  font-size: 1.5em;
+  margin-bottom: 0.4em;
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.App .panel .headings .subtitle {
+  margin-bottom: 0.4em;
+  font-weight: 500;
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.App .panel .headings .source {
+  margin-bottom: 0.55em;
+  line-height: 1em;
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.App .panel .headings .source span {
+  font-size: 0.8em;
+}
+
+.App .panel .headings .source span a {
+  color: white;
+}
+
+.App .panel .transbayToggle {
+  display: flex;
+  margin-bottom: 0.6em;
+  /*line-height: 1em;*/
+}
+
+.App .panel .transbayToggle .toggle {
+  font-size: 0.8em;
+  margin: 0 -0.25em;
+}
+
+.App .panel .transbayToggle input {
+  margin: 0;
+}
+
+.App .panel .transbayToggle .label {
+  margin: auto 0.5em;
+  font-size: 0.8em;
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.App .panel .controls {
+}
+
+.App .panel .legend {
+}
+
+.App .panel .legend .item {
+  display: flex;
+  margin-bottom: 0.5em;
+  margin-right: 0.5em;
+  font-size: 0.8em;
+  cursor: pointer;
+  transition: opacity 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.App .panel .legend .item:last-of-type {
+  margin-bottom: 0;
+  margin-right: 0;
+}
+
+.App .panel .legend .item .swatch {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.5em;
+}
+
+.App .panel .legend .item .label {
+  text-transform: capitalize;
+  white-space: nowrap;
+  user-select: none;
+  line-height: 1em;
+}
+
+.App .panel .search {
+  display: flex;
+  margin-top: 1em;
+  overflow: hidden;
+}
+
+.App .panel .search .react-autosuggest__container {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+}
+
+.App .panel .search .react-autosuggest__container .react-autosuggest__input {
+  font-size: 0.8em;
+  line-height: 1.5em;
+  padding: 0.125em 0.25em;
+  margin: 0;
+  border-radius: 0;
+  outline: none;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 500;
+  border: 1px solid #5D5D5D;
+}
+
+.App .panel .search .react-autosuggest__container .react-autosuggest__suggestions-container {
+  flex: auto;
+  overflow: scroll;
+  margin: 0.5em 0;
+}
+
+.App .panel .search .react-autosuggest__container .react-autosuggest__suggestions-container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.App .panel .search .react-autosuggest__container .react-autosuggest__suggestions-container ul li .suggestion {
+  cursor: pointer;
+  border: 1px solid white;
+  margin: 0.25em 0;
+  padding: 0.125em 0.25em;
+  display: flex;
+  background: #222222;
+  transition: border-color 0.25s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.App .panel .search .react-autosuggest__container .react-autosuggest__suggestions-container ul li .suggestion.selected  {
+  background: #121212;
+}
+
+.App .panel .search .react-autosuggest__container .react-autosuggest__suggestions-container ul li .suggestion .label {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 500;
+  font-size: 0.8em;
+}
+
+.App .panel .search .react-autosuggest__container .react-autosuggest__suggestions-container ul li .suggestion .status {
+  text-transform: capitalize;
+  margin: auto;
+  margin-right: 0;
+  font-size: 0.6em;
+}
+
+@media screen and (max-width: 768px) {
+  .App {
+    flex-direction: column;
+  }
+
+  .App .panel {
+    width: unset;
+  }
+
+  .App .panel .headings .title {
+    margin-bottom: 0.125em;
+  }
+  .App .panel .headings .subtitle {
+    margin-bottom: 0.25em;
+  }
+  .App .panel .headings .source {
+    margin-bottom: 0.25em;
+  }
+  .App .panel .transbayToggle {
+    margin-bottom: 0.5em;
+  }
+
+  .App .panel .controls {
+    display: flex;
+  }
+
+  .App .panel .legend {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .App .panel .legend .item {
+    margin-right: 1.25em;
+  }
+
+  .App .panel .legend .item:last-of-type {
+    margin-right: none;
+  }
+
+  .App .panel .search {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    max-width: 27.5em;
+    width: calc(100vw - 6em - 1px);
+  }
+
+  .App .panel .search .react-autosuggest__container .react-autosuggest__suggestions-container {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    margin-top: 2em;
+    width: calc(100vw - 6em - 1px);
+    max-width: 27.5em;
+    max-height: 20em;
+    background: #222222;
+  }
+
+  .react-autosuggest__suggestions-container--open {
+    border-bottom: 1px solid #5D5D5D; 
+  }
+}
+
+@media screen and (max-width: 512px) {
+  .App .panel {
+    font-size: 0.8em;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+  }
+
+  .App .panel .legend .item {
+    font-size: 0.8em;
+    margin-right: 1em;
+    font-family: 'Fira Sans Condensed', sans-serif;
+  }
+
+  .App .panel .legend .item .label {
+    font-size: 0.9em;
+    line-height: 1.25em;
+  }
+
+  .App .panel .search .react-autosuggest__container .react-autosuggest__suggestions-container {
+    margin-top: 2.45em;
+  }
+}
